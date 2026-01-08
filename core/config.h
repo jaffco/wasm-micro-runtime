@@ -34,10 +34,14 @@
 #define BUILD_TARGET_X86_32
 #elif defined(__thumb__)
 #define BUILD_TARGET_THUMB
+#ifndef BUILD_TARGET
 #define BUILD_TARGET "THUMBV4T"
+#endif
 #elif defined(__arm__)
 #define BUILD_TARGET_ARM
+#ifndef BUILD_TARGET
 #define BUILD_TARGET "ARMV4T"
+#endif
 #elif defined(__mips__) || defined(__mips) || defined(mips)
 #define BUILD_TARGET_MIPS
 #elif defined(__XTENSA__)
